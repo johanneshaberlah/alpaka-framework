@@ -37,7 +37,7 @@ public class ExampleCommand implements Command {
   }
 }
 ```
-```
+```java
 import com.github.johanneshaberlah.alpaka.CommandContext;
 import com.github.johanneshaberlah.alpaka.SubCommand;
 import com.github.johanneshaberlah.alpaka.SubCommandInfo;
