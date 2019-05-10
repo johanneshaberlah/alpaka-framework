@@ -13,7 +13,7 @@ Maven:
 ```
 
 Gradle:
-```xml
+```gradle
   compile group: 'com.github.johanneshaberlah', name: 'alpaka-<your-prefered-implementation>', version: '0.0.1'
 ```
 
