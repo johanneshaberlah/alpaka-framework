@@ -17,6 +17,13 @@ Gradle:
   compile group: 'com.github.johanneshaberlah', name: 'alpaka-<your-prefered-implementation>', version: '0.0.1'
 ```
 
+## Implementations
+Name | State
+--- | ---
+[Discord](https://discordapp.com/) | W.I.P
+[BungeeCord](https://ci.md-5.net/job/BungeeCord/) | W.I.P
+[SpigotMC](https://www.spigotmc.org/) | W.I.P
+
 ## Usage
 
 ```java
