@@ -13,6 +13,8 @@ public class ExampleCommand implements Command {
   @Override
   public void execute(CommandContext context) {
     ExampleObject exampleObject = context.arguments().require(ExampleObject.class);
-    System.out.println("Loaded ExampleObject with content " + exampleObject.getText());
+    if (exampleObject != null) {
+      System.out.println("Loaded ExampleObject with content " + exampleObject.getText());
+    }
   }
 }

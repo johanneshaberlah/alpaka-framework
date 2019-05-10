@@ -4,6 +4,7 @@ package com.github.johanneshaberlah.alpaka;
  * MessageSink, which allows to send messages application independent. Since all target systems are
  * able to send a message as a string, i don't need to supply a char array or anything.
  */
+@FunctionalInterface
 public interface MessageSink {
 
   /**
