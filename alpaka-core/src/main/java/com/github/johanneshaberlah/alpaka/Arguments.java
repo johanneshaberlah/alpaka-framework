@@ -6,6 +6,7 @@ import com.google.common.base.Preconditions;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.BiConsumer;
 
 public final class Arguments {
   private ElementIterator<String> incrementingArray;
@@ -15,9 +16,17 @@ public final class Arguments {
 
   private Arguments(String[] raw, Map<Class, ArgumentType> argumentTypes, CommandContext context) {
     this.raw = raw;
-    this.incrementingArray = ElementIterator.create(raw, 0);
+    this.incrementingArray = ElementIterator.create(Arrays.copyOf(raw, raw.length), 0);
     this.argumentTypes = argumentTypes;
     this.commandContext = context;
+    this.argumentTypes.forEach(
+        (aClass, argumentType) -> {
+          System.out.println(aClass.getSimpleName() + " -> " + argumentType.getClass().getSimpleName());
+        });
+  }
+
+  public String next() {
+    return this.incrementingArray.next();
   }
 
   public <E> E require(Class<E> type) {
